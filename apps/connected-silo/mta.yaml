@@ -1,0 +1,28 @@
+ID: ReferenceConnectedSiloApp
+_schema-version: '3.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: connected-silo
+    type: html5
+    path: ui
+    build-parameters:
+      builder: grunt
+  - name: reference_ui_connected_silo_deployer
+    type: com.sap.html5.application-content
+    path: ui_deployer
+    requires:
+      - name: reference_connected_silo_html5_repo_host
+    build-parameters:
+      requires:
+        - name: connected-silo
+          artifacts:
+            - './*'
+          target-path: resources/connected-silo
+resources:
+  - name: reference_connected_silo_html5_repo_host
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service

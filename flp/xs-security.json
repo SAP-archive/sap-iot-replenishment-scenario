@@ -1,0 +1,63 @@
+{
+	"xsappname": "ReferenceApp",
+	"tenant-mode": "dedicated",
+	"oauth2-configuration": {
+		"token-validity": 900,
+		"system-attributes": [
+			"rolecollections",
+			"groups"
+		]
+	},
+	"description": "Security profile of called application",
+	"foreign-scope-references": ["$ACCEPT_GRANTED_SCOPES"],
+	"scopes": [{
+		"name": "$XSAPPNAME.MyViewScope",
+		"description": "View Authorizations for $XSAPPNAME"
+	}, {
+		"name": "$XSAPPNAME.MyCreateScope",
+		"description": "Create Authorizations for $XSAPPNAME"
+	}],
+	"role-templates": [{
+			"name": "Viewer",
+			"description": "Functional authorization for the reuse UI ",
+			"scope-references": [
+				"$XSAPPNAME.MyViewScope"
+			]
+		}, {
+			"name": "Admin",
+			"description": "Functional authorization for the ThingModeller UI",
+			"scope-references": [
+				"$XSAPPNAME.MyViewScope",
+				"$XSAPPNAME.MyCreateScope",
+				"uaa.user"
+			]
+		}, {
+			"name": "Services_SmartBusinessModeler",
+			"description": "Smart Business Modeler",
+			"scope-references": [
+				"$XSAPPNAME(application,ssb,sap-smartbusiness-service).Modeler"
+			]
+		},
+		{
+			"name": "Services_SmartBusinessAdministrator",
+			"description": "Smart Business Administrator",
+			"scope-references": [
+				"$XSAPPNAME(application,ssb,sap-smartbusiness-service).Administrator"
+			]
+		},
+		{
+			"name": "Services_SmartBusinessAlertSubscriber",
+			"description": "Smart Business Alert User",
+			"scope-references": [
+				"$XSAPPNAME(application,ssb,sap-smartbusiness-service).AlertSubscriber"
+			]
+		},
+		{
+			"name": "Services_SmartBusinessDeveloper",
+			"description": "Smart Business Developer",
+			"scope-references": [
+				"$XSAPPNAME(application,ssb,sap-smartbusiness-service).Developer"
+			]
+		}
+	]
+}

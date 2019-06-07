@@ -1,0 +1,88 @@
+ID: ReferenceApp
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: reference_flp_appRouter
+    type: javascript.nodejs
+    path: appRouter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: reference_html5_repo_runtime
+      - name: portal_resources_reference
+      - name: uaa_reference
+      - name: <<SAP_LEONARDO_IOT_SERVICE_INSTANCE_NAME>>
+      - name: IOTAS_CONTROLS
+        group: destinations
+        properties:
+          strictSSL: false
+          forwardAuthToken: true
+          name: IOTAS_CONTROLS
+          url: '~{url}'
+      - name: IOT_SMART_BUSINESS
+        group: destinations
+        properties:
+          strictSSL: false
+          forwardAuthToken: true
+          name: IOT_SMART_BUSINESS
+          url: '~{url}'
+      - name: IOT_SMART_BUSINESS_SERVICE
+        group: destinations
+        properties:
+          strictSSL: false
+          forwardAuthToken: true
+          name: IOT_SMART_BUSINESS_SERVICE
+          url: '~{url}'
+      - name: sapui52
+        group: destinations
+        properties:
+          strictSSL: false
+          forwardAuthToken: true
+          name: sapui52
+          url: '~{url}'
+  - name: reference_flp
+    type: com.sap.portal.content
+    path: flp-module
+    parameters:
+      stack: cflinuxfs3
+      memory: 128M
+      buildpack: https://github.com/cloudfoundry/nodejs-buildpack/releases/download/v1.6.39/nodejs-buildpack-cflinuxfs3-v1.6.39.zip
+      execute-app: false
+    requires:
+      - name: portal_resources_reference
+      - name: uaa_reference
+      - name: reference_connected_silo_html5_repo_host
+resources:
+  - name: reference_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: uaa_reference
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: portal_resources_reference
+    parameters:
+      service-plan: standard
+      service: portal
+    type: org.cloudfoundry.managed-service
+  - name: IOTAS_CONTROLS
+    properties:
+      url: 'https://sapuiiot.cfapps.eu10.hana.ondemand.com'
+  - name: IOT_SMART_BUSINESS
+    properties:
+      url: 'https://sap-smartbusiness-service-ui-runtime.cfapps.eu10.hana.ondemand.com'
+  - name: IOT_SMART_BUSINESS_SERVICE
+    properties:
+      url: 'https://sap-smartbusiness-service-hcp-cf.cfapps.eu10.hana.ondemand.com'
+  - name: sapui52
+    properties:
+      url: 'https://sapui5.hana.ondemand.com'
+  - name: <<SAP_LEONARDO_IOT_SERVICE_INSTANCE_NAME>>
+    type: org.cloudfoundry.existing-service
+  - name: reference_connected_silo_html5_repo_host
+    type: org.cloudfoundry.existing-service

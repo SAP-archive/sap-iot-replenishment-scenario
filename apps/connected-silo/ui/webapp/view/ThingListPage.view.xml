@@ -1,0 +1,367 @@
+<mvc:View controllerName="sap.iot.noah.connectedsilo.controller.ThingListPage" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:iot="sap.ui.iot.controls"
+	xmlns:iotele="sap.ui.iot.elements" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core" displayBlock="true">
+	<Page title="{i18nNew>thingListTitle}" enableScrolling="false" showNavButton="true" navButtonPress="handleNavBackPress">
+		<fb:FilterBar id="iotFilterBar" reset="onReset" search="onSearch" showRestoreButton="true" visible="true" showClearButton="false">
+			<fb:filterGroupItems>
+				<fb:FilterGroupItem groupName="Selected Columns" groupTitle="Selected Columns" visibleInFilterBar="false" name="ThingId" label="ThingId"
+					labelTooltip="ThingId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Selected Columns" groupTitle="Selected Columns" visibleInFilterBar="true" name="ThingName" label="{i18nNew>ThingName}"
+					labelTooltip="{i18nNew>ThingName}">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingName" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Selected Columns" groupTitle="Selected Columns" visibleInFilterBar="false" name="ThingType" label="ThingType"
+					labelTooltip="ThingType">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingType" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Selected Columns" groupTitle="Selected Columns" visibleInFilterBar="false" name="ThingExternalId"
+					label="ThingExternalId" labelTooltip="ThingExternalId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingExternalId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
+							change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber"
+							change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="true"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType"
+					label="Silo Type"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation"
+							change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/EventType" label="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/EventType"
+					labelTooltip="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/EventType">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/EventType" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High" label="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High"
+					labelTooltip="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium" label="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium"
+					labelTooltip="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low" label="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low"
+					labelTooltip="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="true"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material" label="Material"
+					labelTooltip="Material">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="HierarchyId"
+					label="HierarchyId" labelTooltip="HierarchyId">
+					<fb:control>
+						<MultiInput action:filterColumn="HierarchyId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="HierarchyName"
+					label="HierarchyName" labelTooltip="HierarchyName">
+					<fb:control>
+						<MultiInput action:filterColumn="HierarchyName" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="RootThingId"
+					label="RootThingId" labelTooltip="RootThingId">
+					<fb:control>
+						<MultiInput action:filterColumn="RootThingId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="RootThingName"
+					label="RootThingName" labelTooltip="RootThingName">
+					<fb:control>
+						<MultiInput action:filterColumn="RootThingName" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="RootThingType"
+					label="RootThingType" labelTooltip="RootThingType">
+					<fb:control>
+						<MultiInput action:filterColumn="RootThingType" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="RootThingDescription"
+					label="RootThingDescription" labelTooltip="RootThingDescription">
+					<fb:control>
+						<MultiInput action:filterColumn="RootThingDescription" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="RootThingExternalId"
+					label="RootThingExternalId" labelTooltip="RootThingExternalId">
+					<fb:control>
+						<MultiInput action:filterColumn="RootThingExternalId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="HierarchyDescription"
+					label="HierarchyDescription" labelTooltip="HierarchyDescription">
+					<fb:control>
+						<MultiInput action:filterColumn="HierarchyDescription" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="HierarchyExternalId"
+					label="HierarchyExternalId" labelTooltip="HierarchyExternalId">
+					<fb:control>
+						<MultiInput action:filterColumn="HierarchyExternalId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingId"
+					label="ThingId" labelTooltip="ThingId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ISOCode"
+					label="ISOCode" labelTooltip="ISOCode">
+					<fb:control>
+						<MultiInput action:filterColumn="ISOCode" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingDescription"
+					label="ThingDescription" labelTooltip="ThingDescription">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingDescription" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingName"
+					label="ThingName" labelTooltip="ThingName">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingName" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingExternalId"
+					label="ThingExternalId" labelTooltip="ThingExternalId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingExternalId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingType"
+					label="ThingType" labelTooltip="ThingType">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingType" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ObjectGroup"
+					label="ObjectGroup" labelTooltip="ObjectGroup">
+					<fb:control>
+						<MultiInput action:filterColumn="ObjectGroup" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="BusinessPartnerName"
+					label="BusinessPartnerName" labelTooltip="BusinessPartnerName">
+					<fb:control>
+						<MultiInput action:filterColumn="BusinessPartnerName" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="BPLandlinePhoneNumber"
+					label="BPLandlinePhoneNumber" labelTooltip="BPLandlinePhoneNumber">
+					<fb:control>
+						<MultiInput action:filterColumn="BPLandlinePhoneNumber" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="BPMobilePhoneNumber"
+					label="BPMobilePhoneNumber" labelTooltip="BPMobilePhoneNumber">
+					<fb:control>
+						<MultiInput action:filterColumn="BPMobilePhoneNumber" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingCustomerId"
+					label="ThingCustomerId" labelTooltip="ThingCustomerId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingCustomerId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="ThingRegionDescription" label="ThingRegionDescription" labelTooltip="ThingRegionDescription">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingRegionDescription" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="ThingCountryDescription" label="ThingCountryDescription" labelTooltip="ThingCountryDescription">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingCountryDescription" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingCountryId"
+					label="ThingCountryId" labelTooltip="ThingCountryId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingCountryId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
+					name="ThingCommunicationData" label="ThingCommunicationData" labelTooltip="ThingCommunicationData">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingCommunicationData" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="ThingLocationId"
+					label="ThingLocationId" labelTooltip="ThingLocationId">
+					<fb:control>
+						<MultiInput action:filterColumn="ThingLocationId" change="onTextChange" valueHelpRequest="onClickValueHelpRequest"
+							tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="Latitude"
+					label="Latitude" labelTooltip="Latitude">
+					<fb:control>
+						<MultiInput action:filterColumn="Latitude" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false" name="Longitude"
+					label="Longitude" labelTooltip="Longitude">
+					<fb:control>
+						<MultiInput action:filterColumn="Longitude" change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Telemetry" groupTitle="Telemetry" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Telemetry" groupTitle="Telemetry" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="Telemetry" groupTitle="Telemetry" visibleInFilterBar="false"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature"
+					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature"
+					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature">
+					<fb:control>
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature" change="onTextChange"
+							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+			</fb:filterGroupItems>
+		</fb:FilterBar>
+		<iot:IoTThingList id="idIoTThingList" headerText="Devices" initialSortColumn="ThingId" initialSortOrder="Ascending"
+			rowSelect="onThingListPress" controlType="Table"
+			things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material,DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA,DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES '}}">
+			<iot:columns>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingName}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingType}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingDescription}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>BusinessPartnerName}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>fillLevelTons}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>siloCapacity}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>Material}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>humidity}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>temperature}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>siloType}"/>
+			</iot:columns>
+			<iot:things>
+				<iotele:IoTThingListElement thingImage="{ThingId}" highSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High}"
+					lowSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low}"
+					mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}">
+					<iotele:cells>
+						<iotele:IoTThingListColumn text="{ThingName}"/>
+						<iotele:IoTThingListColumn text="{ThingType}"/>
+						<iotele:IoTThingListColumn text="{ThingDescription}"/>
+						<iotele:IoTThingListColumn text="{BusinessPartnerName}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloCapacity}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType}"/>
+					</iotele:cells>
+				</iotele:IoTThingListElement>
+			</iot:things>
+		</iot:IoTThingList>
+	</Page>
+</mvc:View>

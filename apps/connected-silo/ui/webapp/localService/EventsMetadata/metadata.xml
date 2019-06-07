@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+		<Schema Namespace="com.sap.appiot" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Event">
+				<Key>
+					<PropertyRef Name="EventId"></PropertyRef>
+				</Key>
+				<Property Name="EventId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="ExternalId" Type="Edm.String"></Property>
+				<Property Name="CorrelationId" Type="Edm.String"></Property>
+				<Property Name="BusinessTimestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="Status" Type="Edm.String"></Property>
+				<Property Name="EventType" Type="Edm.String"></Property>
+				<Property Name="Type" Type="Edm.String"></Property>
+				<Property Name="Severity" Type="Edm.Int16"></Property>
+				<Property Name="Source" Type="Edm.String"></Property>
+				<Property Name="Code" Type="Edm.String"></Property>
+				<Property Name="ThingId" Type="Edm.String"></Property>
+				<Property Name="Property" Type="Edm.String"></Property>
+				<Property Name="Tenant" Type="Edm.String"></Property>
+				<Property Name="Description" Type="Edm.String"></Property>
+			</EntityType>
+			<EntityContainer Name="CompositeEventsEventType" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Events" EntityType="com.sap.appiot.Event"></EntitySet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

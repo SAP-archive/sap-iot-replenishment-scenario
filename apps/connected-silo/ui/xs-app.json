@@ -1,0 +1,47 @@
+{
+	"welcomeFile": "/connected-silo/webapp/index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+		"source": "^/IOTAS-ADVANCEDLIST-THING-ODATA/(.*)$",
+		"service": "com.sap.leonardo.iot",
+		"endpoint": "advancedlist-thing-sap",
+		"target": "$1",
+		"csrfProtection": false
+	}, {
+		"source": "^/IOTAS-DETAILS-THING-ODATA/(.*)$",
+		"service": "com.sap.leonardo.iot",
+		"endpoint": "details-thing-sap",
+		"target": "$1",
+		"csrfProtection": false
+	}, {
+		"source": "^/IOTAS-COMPOSITE-EVENTS-ODATA/(.*)$",
+		"service": "com.sap.leonardo.iot",
+		"endpoint": "composite-events-odata",
+		"target": "$1",
+		"csrfProtection": false
+	}, {
+		"source": "^/resources/sap/ui/iot/(.*)$",
+		"destination": "IOTAS_CONTROLS",
+		"target": "/sap/ui/iot/$1",
+		"csrfProtection": false
+	}, {
+		"source": "^/backend/(.*)$",
+		"service": "com.sap.leonardo.iot",
+		"endpoint": "appiot-mds",
+		"target": "$1",
+		"csrfProtection": false
+	}, {
+		"source": "^/resources/(.*)$",
+		"destination": "sapui52",
+		"target": "$1",
+		"csrfProtection": false
+	}, {
+		"source": "^(.*)$",
+		"target": "$1",
+		"service": "html5-apps-repo-rt",
+		"authenticationType": "xsuaa"
+	}]
+}
