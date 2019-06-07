@@ -32,14 +32,8 @@ We provided the complete documentation inside [docs](/docs) folder.
 
 ## Support
 
-Please check the Leonardo IoT for cloud foundry topic at http://answers.sap.com for answers or to ask a new question relative to this reference application and relative to the products used. You might be referred to other support forums and channels from there.
-
-## Contributing
-
-If you have feedback or suggestions for improvements please also use the above channel. You can also do a pull request if you made changes to the reference app that you want to share with others and we will review it.
-
-If you want to publish your application as another "reference app" please feel free to do so in your own space and let everyone know via above channel.
+The content is provided "as-is". There is no guarantee that raised issues will be answered or addressed in future releases.
 
 ## License
-Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE file](/LICENSE.txt)
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+This file is licensed under the SAP Sample Code License, v1.0 except as noted otherwise in the [LICENSE file](/LICENSE.pdf)
