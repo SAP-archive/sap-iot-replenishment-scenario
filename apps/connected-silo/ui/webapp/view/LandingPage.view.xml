@@ -1,0 +1,63 @@
+<mvc:View controllerName="sap.iot.noah.connectedsilo.controller.LandingPage" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:iot="sap.ui.iot.controls"
+	xmlns:iotele="sap.ui.iot.elements" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core" displayBlock="true">
+	<Page title="{i18n>landingpage}" enableScrolling="false">
+		<content>
+			<HBox width="100%" height="100%">
+				<items>
+					<VBox width="25%" direction="Column">
+						<items>
+							<iot:IoTThingList headerText="Devices" initialSortColumn="ThingId" initialSortOrder="Ascending" rowSelect="zoomToMap" controlType="List"
+								things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material,DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES '}}">
+								<iot:columns>
+									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation1}"/>
+									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation2}"/>
+									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation3}"/>
+								</iot:columns>
+								<iot:things>
+									<iotele:IoTThingListElement thingImage="{ThingId}" highSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High}"
+										lowSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low}"
+										mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}">
+										<iotele:cells>
+											<iotele:IoTThingListColumn text="Device ID: {ThingName}"/>
+											<iotele:IoTThingListColumn text="Material: {DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}"/>
+											<iotele:IoTThingListColumn text="Fill Level: {DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons} Tons"/>
+										</iotele:cells>
+									</iotele:IoTThingListElement>
+								</iot:things>
+							</iot:IoTThingList>
+						</items>
+					</VBox>
+					<VBox width="75%" direction="Column">
+						<items>
+							<iot:IoTMap id="idMap" things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material '}}">
+								<iot:things>
+									<iotele:IoTMapElement latitude="{Latitude}" longitude="{Longitude}" thingid="{ThingId}">
+										<iotele:status>
+											<iotele:IoTStatusElement id="__element0" highSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High}"
+												lowSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low}"
+												mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}"/>
+										</iotele:status>
+										<iotele:thingcard>
+											<iotele:IoTThingCardElement thingCardImage="{ThingId}" MultiThingCardHeaderPosition1="{ThingName}"
+												MultiThingCardHeaderPosition2="{DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}" SingleThingCardContactInfoLabel1="BusinessPartnerName"
+												SingleThingCardContactInfo1="{BusinessPartnerName}" SingleThingCardContactInfoLabel2="BPMobilePhoneNumber"
+												SingleThingCardContactInfo2="{BPMobilePhoneNumber}" SingleThingCardContactInfoLabel3="BPLandlinePhoneNumber"
+												SingleThingCardContactInfo3="{BPLandlinePhoneNumber}" SingleThingCardContactsVisible="true" SingleThingCardEventsVisible="true"
+												SingleThingCardHeaderPosition1="{ThingName}" SingleThingCardHeaderPosition2="{BusinessPartnerName}"
+												SingleThingCardHeaderPosition3="{ThingId}" SingleThingCardSecondSectionTitle="Events" SingleThingCardFooterVisible="true"
+												MultiThingCardFooterVisible="true" SingleThingCardThirdSectionTitle="Contact Info" singleThingCardFooterText="Analysis Page"
+												multiThingCardFooterText="Device Overview" singleThingCardTitle="Device Details" multiThingCardTitle="Devices"
+												multiThingCardRowSelect="oMultiRowSelect" multiThingCardFooterSelect="oMultiFooterSelect" singleThingCardHeaderSelect="oSingleHeaderSelect"
+												singleThingCardFooterSelect="oSingleFooterSelect"/>
+										</iotele:thingcard>
+									</iotele:IoTMapElement>
+								</iot:things>
+							</iot:IoTMap>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+		</content>
+	</Page>
+</mvc:View>
