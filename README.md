@@ -16,7 +16,7 @@ We used Connected Silo at SAP as the example devices to be monitored and to help
 
 ## Download
 
-[Download the files from GitHub as a zip file](archive/master.zip), or [clone the repository](https://help.github.com/articles/cloning-a-repository/) on your desktop.
+[Download the files from GitHub as a zip file](../../archive/master.zip), or [clone the repository](https://help.github.com/articles/cloning-a-repository/) on your desktop.
 
 ## Installation
 
