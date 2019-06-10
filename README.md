@@ -9,7 +9,7 @@ It features the use of SAP Leonardo IoT and a Web-based UI.
 We used Connected Silo at SAP as the example devices to be monitored and to help SAP facilities with the replenishment of Connected Silos.
 
 ## Prerequisites
-* [SAP Cloud Platform Account](https://cloudplatform.sap.com/index.html) with a neo sub-account and a cloud foundry sub-account
+* [SAP Cloud Platform Account](https://cloudplatform.sap.com/index.html) with a Neo sub-account and a Cloud Foundry sub-account
 * [A subscription to Leonardo IoT](https://cloudplatform.sap.com/capabilities/product-info.SAP-Leonardo-Internet-of-Things.1e3dd0d0-a355-4a0a-bc3e-36285eae4cbe.html) and an instance of [iot (service) for cloud foundry](https://help.sap.com/viewer/2f1daa938df84fd090fa2a4da6e4bc05/Cloud/en-US).  **These are commericial paid products** 
 * [Multi-Target Application Archive Builder](https://tools.hana.ondemand.com/#cloud)
 *  [MultiApps CF CLI Plugin](https://github.com/cloudfoundry-incubator/multiapps-cli-plugin)
@@ -35,5 +35,4 @@ We provided the complete documentation inside [docs](/docs) folder.
 The content is provided "as-is". There is no guarantee that raised issues will be answered or addressed in future releases.
 
 ## License
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the SAP Sample Code License, v1.0 except as noted otherwise in the [LICENSE file](/LICENSE.pdf)
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP Sample Code License, v1.0 except as noted otherwise in the [LICENSE file](/LICENSE).
