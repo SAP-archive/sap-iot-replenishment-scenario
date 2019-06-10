@@ -10,7 +10,7 @@ We used Connected Silo at SAP as the example devices to be monitored and to help
 
 ## Prerequisites
 * [SAP Cloud Platform Account](https://cloudplatform.sap.com/index.html) with a Neo sub-account and a Cloud Foundry sub-account
-* [A subscription to Leonardo IoT](https://cloudplatform.sap.com/capabilities/product-info.SAP-Leonardo-Internet-of-Things.1e3dd0d0-a355-4a0a-bc3e-36285eae4cbe.html) and an instance of [iot (service) for cloud foundry](https://help.sap.com/viewer/2f1daa938df84fd090fa2a4da6e4bc05/Cloud/en-US).  **These are commericial paid products** 
+* [A subscription to Leonardo IoT](https://cloudplatform.sap.com/capabilities/product-info.SAP-Leonardo-Internet-of-Things.1e3dd0d0-a355-4a0a-bc3e-36285eae4cbe.html) and an instance of [iot (service) for cloud foundry](https://help.sap.com/viewer/2f1daa938df84fd090fa2a4da6e4bc05/Cloud/en-US). **Note: These are commericial paid products.** 
 * [Multi-Target Application Archive Builder](https://tools.hana.ondemand.com/#cloud)
 *  [MultiApps CF CLI Plugin](https://github.com/cloudfoundry-incubator/multiapps-cli-plugin)
 
