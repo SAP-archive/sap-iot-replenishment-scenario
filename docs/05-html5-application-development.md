@@ -189,6 +189,8 @@ After the structure of the application is modified, there needs to be some chang
 	
 4.	Consuming Smart Business Controls
 
+	Configure Smart Business KPI's as explained in [06-creating-smart-business-charts.md](06-creating-smart-business-charts.md).
+
 	After configuring the Business Systems in the Samrt Business Administrative tile, you can create KPIs, Evaluations and Drilldowns. Please refer [Smart Business](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.00/en-US/be5b7ac2ef364fa7b7154cd0bb37a93f.html) documentation for the configuration of these artifacts.
 	
 	Once these are created, they can be consumed in the `ThingPage.view.xml` under application_folder/views/. The smart business Evaluation ID is used inside the Object Page section by using the following piece of code -
