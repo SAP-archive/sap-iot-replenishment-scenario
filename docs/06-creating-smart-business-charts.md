@@ -2,7 +2,7 @@
 
 
 ## Adding Smart Business Roles
-* Please create a role collection and add all smart business roles as mentioned below and assign to all the users.
+* Please create a role collection and add all smart business roles as mentioned below and assign the role collection to the respective users.
 
 |Application Identifier|Role Template| Role|
 |--|--|--|
@@ -45,7 +45,7 @@ Here are the steps to configure OData Service Lookup for Smart Business.
 
 ## Creating KPI
 
-*Click on "Create KPI" tile.
+* Click on "Create KPI" tile.
 * Provide Title
 * Choose Source System as **BusinessSystem01** 
 * Choose Service Discovery Mechanism as **IoT Discoverer Based**
