@@ -50,6 +50,12 @@
 		"target": "$1",
 		"csrfProtection": false
 	}, {
+		"source": "^/backend/(.*)$",
+		"service": "com.sap.leonardo.iot",
+		"endpoint": "appiot-mds",
+		"target": "$1",
+		"csrfProtection": false
+	}, {
 		"source": "/backend-image/things/(.*)$",
 		"service": "com.sap.leonardo.iot",
 		"endpoint": "appiot-fs",
