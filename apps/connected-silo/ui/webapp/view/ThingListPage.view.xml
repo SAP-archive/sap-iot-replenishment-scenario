@@ -329,11 +329,12 @@
 				</fb:FilterGroupItem>
 			</fb:filterGroupItems>
 		</fb:FilterBar>
-		<iot:IoTThingList id="idIoTThingList" headerText="Devices" initialSortColumn="ThingId" initialSortOrder="Ascending"
+		<iot:IoTThingList id="idIoTThingList" headerText="Devices" initialSortColumn="AlternateId" initialSortOrder="Ascending"
 			rowSelect="onThingListPress" controlType="Table"
 			things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material,DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA,DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES '}}">
 			<iot:columns>
 				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingName}"/>
+				<iotele:IoTThingListColumnHeader text="{i18nNew>AlternateId}"/>
 				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingType}"/>
 				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingDescription}"/>
 				<iotele:IoTThingListColumnHeader text="{i18nNew>BusinessPartnerName}"/>
@@ -350,6 +351,7 @@
 					mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}">
 					<iotele:cells>
 						<iotele:IoTThingListColumn text="{ThingName}"/>
+						<iotele:IoTThingListColumn text="{AlternateId}"/>
 						<iotele:IoTThingListColumn text="{ThingType}"/>
 						<iotele:IoTThingListColumn text="{ThingDescription}"/>
 						<iotele:IoTThingListColumn text="{BusinessPartnerName}"/>
