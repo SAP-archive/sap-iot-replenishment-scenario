@@ -75,7 +75,7 @@
 						<ObjectPageSubSection title="{i18n>analyticsSubTitle1}">
 							<blocks>
 								<businesscontrol:Kpi evaluationId="E.1557149658285" showAggregate="true" showFilters="false" showMiniChart="true" showChart="true"
-									showKpiTitle="false" showEvaluationTitle="false" height="700px"/>
+									showKpiTitle="false" showEvaluationTitle="false" height="700px" onAfterInitialization="afterKpiInitialization"/>
 							</blocks>
 						</ObjectPageSubSection>
 					</subSections>
@@ -85,7 +85,7 @@
 						<ObjectPageSubSection title="{i18n>analyticsSubTitle2}">
 							<blocks>
 								<businesscontrol:Kpi evaluationId="E.1557149320043" showAggregate="true" showFilters="false" showMiniChart="true" showChart="true"
-									showKpiTitle="false" showEvaluationTitle="false" height="700px"/>
+									showKpiTitle="false" showEvaluationTitle="false" height="700px" onAfterInitialization="afterKpiInitialization"/>
 							</blocks>
 						</ObjectPageSubSection>
 					</subSections>

@@ -35,8 +35,9 @@ sap.ui.define([
 				ThingId: this.sThingId,
 				ThingType: sThingType
 			};
-			this.byId("idMeasuringPoints").doReload(oContext);
-			//Call the events service for rendering timeline and eventList control
+			this.oContext = oContext;
+			// this.byId("idMeasuringPoints").doReload(oContext);
+			// Call the events service for rendering timeline and eventList control
 			this._readEventsService(this.sThingId);
 
 			this.getView().getModel("thingPageModel").setProperty("/severity", oSeverity);
@@ -157,6 +158,9 @@ sap.ui.define([
 					oThingImage.attachError(that.onImageLoadError, that);
 					oThingImage.setSrc("/backend-image/things/" + that.sThingId);
 					sap.ui.getCore().byId("idBusy").close();
+
+					// make the call for IoT measuring points
+					that.byId("idMeasuringPoints").doReload(that.oContext);
 				},
 				error: function (oError) {
 					jQuery.sap.log.error(oError);
@@ -254,6 +258,15 @@ sap.ui.define([
 				subHeaderTitle: " ",
 				mpPath: oProperty
 			});
+		},
+
+		// Call the smart business charts for particular thing id
+		afterKpiInitialization: function(oEvent) {
+		    var oKpi = oEvent.getSource();
+		    if (!oKpi.getFilters() || oKpi.getFilters().length == 0) {
+			var aFilters = [{ path: "id", operator: "EQ", value1: this.sThingId }];
+			oKpi.setFilters(aFilters);
+		    }
 		},
 
 		/**
