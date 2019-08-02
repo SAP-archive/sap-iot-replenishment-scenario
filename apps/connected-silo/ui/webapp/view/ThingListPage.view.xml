@@ -116,10 +116,10 @@
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="true"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material" label="Material"
+					name="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material" label="Material"
 					labelTooltip="Material">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
