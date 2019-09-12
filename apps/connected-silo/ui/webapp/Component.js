@@ -28,7 +28,7 @@ sap.ui.define([
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
 			this.getRouter().initialize();
-			sap.m.BusyDialog("idBusy").open();
+			(new sap.m.BusyDialog("idBusy")).open();
 
 			//Timeout dialog
 			this.isTimedOut = false;
@@ -116,18 +116,16 @@ sap.ui.define([
 		destroy: function () {
 			// call the base component's destroy function
 			UIComponent.prototype.destroy.apply(this, arguments);
-			if (sap.ui.getCore().byId("idBusy")) {
-				sap.ui.getCore().byId("idBusy").destroy();
-			}
-			if (document.getElementsByClassName("sapUShellApplicationContainer").length >= 3 && document.getElementsByClassName("sapUShellApplicationContainer")[3].getAttribute("id")) {
-				var applicationContainer = document.getElementsByClassName("sapUShellApplicationContainer")[3].getAttribute("id");
+			if (sap.ui.getCore().byId("idBusy")) sap.ui.getCore().byId("idBusy").destroy();
+			
+			if (document.getElementsByClassName("sapUShellApplicationContainer").length >= 1 && document.getElementsByClassName("sapUShellApplicationContainer")[0].getAttribute("id")) {
+				var applicationContainer = document.getElementsByClassName("sapUShellApplicationContainer")[0].getAttribute("id");
 				if (sap.ui.getCore().byId(applicationContainer + "-component---thingpage--idEventList--idEventTable-PersoDialog-Dialog")) {
 					sap.ui.getCore().byId(applicationContainer + "-component---thingpage--idEventList--idEventTable-PersoDialog-Dialog").destroy();
 					sap.ui.getCore().byId(applicationContainer + "-component---thingpage--idEventList--idEventTable-PersoDialog-cb").getParent()
 						.destroy();
 				}
 			}
-
 		}
 	});
 });

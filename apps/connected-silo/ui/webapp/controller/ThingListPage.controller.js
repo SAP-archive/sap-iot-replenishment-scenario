@@ -13,6 +13,7 @@ sap.ui.define([
 			var i18nModel = this.getOwnerComponent().getModel("i18n");
 			this.getView().setModel(i18nModel, "i18nNew");
 		},
+
 		//method on click of value help option of multiInput 
 		onClickValueHelpRequest: function (oEvent) {
 			var that = this;
@@ -262,6 +263,13 @@ sap.ui.define([
 				mediumSeverity: oObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.Medium || 0,
 				lowSeverity: oObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.Low || 0
 			});
+		},
+
+		onExit: function () {
+			// This needs to be handled by the IoT template in the IoTThingList control's onExit method
+			if (this.byId('idIoTThingList') && this.byId('idIoTThingList')._oTPC) {
+				this.byId('idIoTThingList')._oTPC.destroy();
+			}
 		}
 
 	});
