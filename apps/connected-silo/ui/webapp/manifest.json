@@ -26,7 +26,7 @@
 				}
 			},
 			"Thing_Service1": {
-				"uri": "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/demo.tenant01.com.connected.silos:ConnectedSilos",
+				"uri": "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/<<TenantPackageNamespace>>.<<PackageName>>:<<ThingTypeName>>",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
@@ -121,7 +121,7 @@
 					"defaultCountMode": "Inline",
 					"headers": {
 						"sap-iot-eventtype": "com.sap.appiot.eventtypes:StandardEventType",
-						"sap-iot-pst": "demo.tenant01.com.connected.silos:Image,demo.tenant01.com.connected.silos:SILO_METADATA,demo.tenant01.com.connected.silos:SILO_TIME_SERIES,demo.tenant01.com.connected.silos:Material"
+						"sap-iot-pst": "<<TenantPackageNamespace>>.<<PackageName>>:<<PSTName1>>,<<TenantPackageNamespace>>.<<PackageName>>:<<PSTName2>>,<<TenantPackageNamespace>>.<<PackageName>>:<<PSTName3>>"
 					}
 				}
 			},

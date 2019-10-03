@@ -150,7 +150,7 @@ sap.ui.define([
 			var that = this;
 			oDetailsModel.read("/Things('" + sThingId + "')", {
 				urlParameters: {
-					"$expand": "DYN_ENT_demo_tenant01_com_connected_silos__Image,DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA,DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES,DYN_ENT_demo_tenant01_com_connected_silos__Material"
+					"$expand": "DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__<<PSTName1>>,DYN_ENT_<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__<<PSTName2>>,DYN_ENT_<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__<<PSTName3>>"
 				},
 				success: function (oData) {
 					that.getView().getModel("thingPageModel").setProperty("/detailsData", oData);
