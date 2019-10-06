@@ -30,56 +30,56 @@
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/ThingId"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/ThingId"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/ThingId">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/ThingId" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/ThingId" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.moduleSerialNumber">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.moduleSerialNumber"
 							change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.plant"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.plant"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.plant">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.plant" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.plant" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.serialNumber"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.serialNumber"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.serialNumber">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.serialNumber"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.serialNumber"
 							change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="true"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType"
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloType"
 					label="Silo Type"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType">
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloType">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloType" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.storageLocation"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.storageLocation"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.storageLocation">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.storageLocation"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.storageLocation"
 							change="onTextChange" valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
@@ -116,10 +116,10 @@
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Master Data Columns" groupTitle="Master Data Columns" visibleInFilterBar="true"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material" label="Material"
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material/Material.Material" label="Material"
 					labelTooltip="Material">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material/Material.Material" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
@@ -301,29 +301,29 @@
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Telemetry" groupTitle="Telemetry" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Telemetry" groupTitle="Telemetry" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
 				<fb:FilterGroupItem groupName="Telemetry" groupTitle="Telemetry" visibleInFilterBar="false"
-					name="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature"
-					label="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature"
-					labelTooltip="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature">
+					name="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature"
+					label="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature"
+					labelTooltip="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature">
 					<fb:control>
-						<MultiInput action:filterColumn="DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature" change="onTextChange"
+						<MultiInput action:filterColumn="DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature" change="onTextChange"
 							valueHelpRequest="onClickValueHelpRequest" tokenUpdate="onTokenUpdate"/>
 					</fb:control>
 				</fb:FilterGroupItem>
@@ -331,7 +331,7 @@
 		</fb:FilterBar>
 		<iot:IoTThingList id="idIoTThingList" headerText="Devices" initialSortColumn="AlternateId" initialSortOrder="Ascending"
 			rowSelect="onThingListPress" controlType="Table"
-			things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material,DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA,DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES '}}">
+			things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material,DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA,DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES '}}">
 			<iot:columns>
 				<iotele:IoTThingListColumnHeader text="{i18nNew>ThingName}"/>
 				<iotele:IoTThingListColumnHeader text="{i18nNew>AlternateId}"/>
@@ -355,12 +355,12 @@
 						<iotele:IoTThingListColumn text="{ThingType}"/>
 						<iotele:IoTThingListColumn text="{ThingDescription}"/>
 						<iotele:IoTThingListColumn text="{BusinessPartnerName}"/>
-						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons}"/>
-						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloCapacity}"/>
-						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}"/>
-						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity}"/>
-						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature}"/>
-						<iotele:IoTThingListColumn text="{DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloCapacity}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material/Material.Material}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.humidity}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.temperature}"/>
+						<iotele:IoTThingListColumn text="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloType}"/>
 					</iotele:cells>
 				</iotele:IoTThingListElement>
 			</iot:things>

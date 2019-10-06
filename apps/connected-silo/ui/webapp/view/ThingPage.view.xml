@@ -8,7 +8,7 @@
 			flexEnabled="true" enableLazyLoading="true" useIconTabBar="true">
 			<headerTitle>
 				<ObjectPageHeader objectTitle="{thingPageModel>/detailsData/ThingName}"
-					objectSubtitle="{thingPageModel>/detailsData/DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType}"
+					objectSubtitle="{thingPageModel>/detailsData/DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloType}"
 					objectImageAlt="{i18n>thing}" id="ObjectPageLayoutHeaderTitle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true"
 					isObjectSubtitleAlwaysVisible="true" showPlaceholder="true"/>
 			</headerTitle>
@@ -23,7 +23,7 @@
 				<layout:VerticalLayout>
 					<m:ObjectStatus id="objectStatusLabel1" title="Silo Type"/>
 					<m:ObjectStatus id="objectStatusText1"
-						text="{thingPageModel>/detailsData/DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloType}"/>
+						text="{thingPageModel>/detailsData/DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloType}"/>
 				</layout:VerticalLayout>
 				<layout:VerticalLayout>
 					<m:ObjectStatus id="objectStatusLabel2" title="Device Type"/>
@@ -38,18 +38,18 @@
 								<layout:Grid defaultSpan="XL4 L4 M6 S12">
 									<layout:VerticalLayout>
 										<m:Label text="Fill Level (Tons)"/>
-										<m:Text text="{thingPageModel>/detailsData/DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons}"
+										<m:Text text="{thingPageModel>/detailsData/DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons}"
 											class="iotNoahDetailPageKpi"/>
 									</layout:VerticalLayout>
 									<layout:VerticalLayout>
 										<m:Label text="Capacity (Tons)"/>
 										<m:Text class="iotNoahDetailPageKpi"
-											text="{thingPageModel>/detailsData/DYN_ENT_demo_tenant01_com_connected_silos__SILO_METADATA/SILO_METADATA.siloCapacity}"/>
+											text="{thingPageModel>/detailsData/DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_METADATA/SILO_METADATA.siloCapacity}"/>
 									</layout:VerticalLayout>
 									<layout:VerticalLayout>
 										<m:Label text="Material"/>
 										<m:Text class="iotNoahDetailPageKpi"
-											text="{thingPageModel>/detailsData/DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}"/>
+											text="{thingPageModel>/detailsData/DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material/Material.Material}"/>
 									</layout:VerticalLayout>
 								</layout:Grid>
 							</blocks>

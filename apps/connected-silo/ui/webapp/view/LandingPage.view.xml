@@ -8,7 +8,7 @@
 					<VBox width="25%" direction="Column">
 						<items>
 							<iot:IoTThingList headerText="Devices" initialSortColumn="ThingId" initialSortOrder="Ascending" rowSelect="zoomToMap" controlType="List"
-								things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material,DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES '}}">
+								things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material,DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES '}}">
 								<iot:columns>
 									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation1}"/>
 									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation2}"/>
@@ -20,8 +20,8 @@
 										mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}">
 										<iotele:cells>
 											<iotele:IoTThingListColumn text="Device ID: {ThingName}"/>
-											<iotele:IoTThingListColumn text="Material: {DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}"/>
-											<iotele:IoTThingListColumn text="Fill Level: {DYN_ENT_demo_tenant01_com_connected_silos__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons} Tons"/>
+											<iotele:IoTThingListColumn text="Material: {DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material/Material.Material}"/>
+											<iotele:IoTThingListColumn text="Fill Level: {DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__SILO_TIME_SERIES/SILO_TIME_SERIES.fillLevelTons} Tons"/>
 										</iotele:cells>
 									</iotele:IoTThingListElement>
 								</iot:things>
@@ -30,7 +30,7 @@
 					</VBox>
 					<VBox width="75%" direction="Column">
 						<items>
-							<iot:IoTMap id="idMap" things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_demo_tenant01_com_connected_silos__Material '}}">
+							<iot:IoTMap id="idMap" things="{path:'/Things',parameters:{expand:' DYN_ENT_com_sap_appiot_eventtypes__StandardEventType,DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material '}}">
 								<iot:things>
 									<iotele:IoTMapElement latitude="{Latitude}" longitude="{Longitude}" thingid="{ThingId}">
 										<iotele:status>
@@ -40,7 +40,7 @@
 										</iotele:status>
 										<iotele:thingcard>
 											<iotele:IoTThingCardElement thingCardImage="{ThingId}" MultiThingCardHeaderPosition1="{ThingName}"
-												MultiThingCardHeaderPosition2="{DYN_ENT_demo_tenant01_com_connected_silos__Material/Material.Material}" SingleThingCardContactInfoLabel1="BusinessPartnerName"
+												MultiThingCardHeaderPosition2="{DYN_ENT_<<TenantPackageNamespaceWithUnderscores>>_<<PackageNameWithUnderscores>>__Material/Material.Material}" SingleThingCardContactInfoLabel1="BusinessPartnerName"
 												SingleThingCardContactInfo1="{BusinessPartnerName}" SingleThingCardContactInfoLabel2="BPMobilePhoneNumber"
 												SingleThingCardContactInfo2="{BPMobilePhoneNumber}" SingleThingCardContactInfoLabel3="BPLandlinePhoneNumber"
 												SingleThingCardContactInfo3="{BPLandlinePhoneNumber}" SingleThingCardContactsVisible="true" SingleThingCardEventsVisible="true"
