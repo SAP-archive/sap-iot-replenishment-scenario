@@ -25,6 +25,8 @@ Below are the currently whitelisted Redirection URL's
 
 ```
 https://bocauth.us1.sapbusinessobjects.cloud:443
+https://bocauth.eu1.sapbusinessobjects.cloud
+https://oatuh-r.cnry.projectorca.cloud:443
 ```
 
 <b>NOTE</b>: This reference application will not work if the SAC Redirection URI are not whitelisted as per the above list. So Please make sure it has been listed above. If the SAC Redirect URI is not listed then please send a request to whitelisting.
