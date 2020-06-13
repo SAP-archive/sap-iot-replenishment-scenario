@@ -1,8 +1,0 @@
-<mvc:View controllerName="sap.iot.noah.connectedsilo.controller.AnalysisPage" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:iot="sap.ui.iot.controls"
-	xmlns:iotele="sap.ui.iot.elements" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core" displayBlock="true">
-	<Page title="{i18n>analysispage}" showNavButton="true" navButtonPress="handleNavBackPress" enableScrolling="false">
-		<iot:IoTChart id="idChart" noOfHours="24" isSliderVisible="true" rememberTimeRange="false" rememberMeasuredValues="false"
-			displayLegend="true"></iot:IoTChart>
-	</Page>
-</mvc:View>
