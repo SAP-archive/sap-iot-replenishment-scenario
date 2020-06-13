@@ -36,3 +36,4 @@ The content is provided "as-is". There is no guarantee that raised issues will b
 
 ## License
 Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP Sample Code License, v1.0 except as noted otherwise in the [LICENSE file](/LICENSE).
+
