@@ -1,0 +1,27 @@
+{
+	"xsappname": "odata-wrapper-xsapp2",
+	"tenant-mode": "dedicated",
+	"oauth2-configuration": {
+	  "token-validity": 9000,
+	  "redirect-uris": ["https://bocauth.eu1.sapbusinessobjects.cloud","https://bocauth.us1.sapbusinessobjects.cloud","https://oatuh-r.cnry.projectorca.cloud","http://localhost","http://*.cfapps.sap.hana.ondemand.com","http://*.cfapps.eu10.hana.ondemand.com","http://*.cfapps.eu20.hana.ondemand.com","http://*.cfapps.us10.hana.ondemand.com"],
+	  "system-attributes": [
+		"rolecollections",
+		"groups"
+	  ]
+    },
+	"scopes": [
+	  {
+		  "name": "uaa.user",
+		  "description": "uaauser"
+	  }
+    ],
+	"role-templates": [
+	  {
+		"name": "Admin",
+		"description": "Functional authorization for the ThingModeller UI",
+		"scope-references": [
+          "uaa.user"
+		]
+	  }
+	]
+  }

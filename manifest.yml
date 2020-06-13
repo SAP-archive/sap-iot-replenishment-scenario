@@ -1,0 +1,10 @@
+---
+applications:
+- name: cm-odata-wrapper
+  instances: 1
+  memory: 1G
+  env:
+    destinations: >
+      [
+        {"name": "live", "url":"https://sap-iot-noah-live-cm-sac-adaptor.cfapps.eu10.hana.ondemand.com", "forwardAuthToken": true}
+      ]
